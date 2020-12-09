@@ -151,11 +151,7 @@ int validatePassport(passportStruct passport) {
 		}
 	}
 	if (eyeColourCheck == 1) passport.ecl.second = 1;
-
 	if (regex_match(passport.pid.first, regPID)) passport.pid.second = 1;							   // Passport ID
-
-
-
 	if (passport.byr.second == 1 && passport.ecl.second == 1 && passport.eyr.second == 1 && passport.hcl.second == 1 && passport.hgt.second == 1 && passport.iyr.second == 1 && passport.pid.second == 1) return 1;
 
 	return 0;
